@@ -17,8 +17,7 @@ public:
 	bool Start();
 	update_status Update();
 	bool CleanUp();
-
-	void  OnCollision(Collider* player, Collider* wall);
+	void OnCollision(Collider* col_1, Collider* col_2);
 
 public:
 
@@ -28,7 +27,7 @@ public:
 	Animation up;
 	Animation down;
 	iPoint position;
-	Collider* player;
+	Collider* player = nullptr;
 };
 
 #endif
